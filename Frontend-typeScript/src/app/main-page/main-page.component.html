@@ -1,0 +1,14 @@
+<div >
+    <div class="navbar">
+        <div id="navFilmsBtn" [ngClass]="'navFilmsButton' + (navBarSelectedIndex === 0 ? ' navSelected' : '')" (click)="navBarItemClicked(0)">Filmy</div>
+        <div class="verticalDivider"></div>
+        <div id="navProjectionsBtn" [ngClass]="'navProjectionsButton' + (navBarSelectedIndex === 1 ? ' navSelected' : '')" (click)="navBarItemClicked(1)">Projekcje</div>
+    </div>
+    <div class="content">
+        <app-films-page *ngIf="navBarSelectedIndex === 0"></app-films-page>
+        <app-projections-page *ngIf="navBarSelectedIndex === 1" (openMenu)="openReservationMenu($event)"></app-projections-page>
+    </div>
+    <div *ngIf="currentlyOpenProjectionId >= 0 " class="dialog">
+        <app-reservation-menu [projectionId]="currentlyOpenProjectionId" (closeMenu)="closeReservationMenu()"></app-reservation-menu>
+    </div>
+</div>

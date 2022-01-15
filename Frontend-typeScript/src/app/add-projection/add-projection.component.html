@@ -1,0 +1,27 @@
+<div class="textInput">
+    <div class="columnForm">
+
+        <select class="input" #selectElem (change)="onChangeTitle(selectElem.value)">
+            <option *ngFor="let film of films" [value]="film.id">
+                {{film.title}}
+            </option>
+        </select>
+
+        <select class="input" #selectElem (change)="onChangeRoom(selectElem.value)">
+            <option *ngFor="let room of listRooms" [value]="room.nr">
+                {{"sala: "}}
+                {{room.nr}}
+                {{" wielkość sali: "}}
+                {{room.numberOfSeats}}
+            </option>
+        </select>
+
+
+        <input class="input" #input type="datetime-local" [min]="minDate" value="minDate"
+            (change)="handleDateSelect(input.value)" />
+
+
+        <button class="submitButton" (click)="addProjectionButton()">Dodaj projekcję</button>
+
+    </div>
+</div>

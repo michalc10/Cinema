@@ -1,0 +1,15 @@
+<div class="filmDisplay" (click)="navigateToFilm()">
+    <div *ngIf="film?.imageUrl"  class="imageContainer">
+        <img [src]="film?.imageUrl" style="width: 100%; height: 100%;"/>
+    </div>
+    <div *ngIf="film?.imageUrl" class="imageGradient">
+    </div>
+    <div class="filmInformationContainer">
+        <div class="textContainer">
+            {{ film?.title ?? 'Brak tytułu' }}
+        </div>
+        <div class="durationContainer">
+            {{ (film?.duration ?? '??') + ' minut' }}
+        </div>
+    </div>
+</div>

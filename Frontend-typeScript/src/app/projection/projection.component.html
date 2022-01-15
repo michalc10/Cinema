@@ -1,0 +1,29 @@
+<div class="projectionContainer" (click)="onClicked()" >
+    <div class="projectionDate">
+        {{ date }}
+    </div>
+    <div class="projectionTime">
+        {{ time }}
+    </div>
+        <div *ngIf="filmTitle" class="projectionFilmTitle">
+            {{ filmTitle }}
+        </div>
+    <div class="projectionRoomName">
+        {{ roomName }}
+    </div>
+
+    <div class="horizontalSpacer"></div>
+
+    <div class="projectionAvailableTicketsLabel">
+        dostępnych miejsc: 
+    </div>
+    <div class="projectionAvailableTickets">
+        {{ availableTickets }}
+    </div>
+    <div class="projectionNumberOfSeatsLabel">
+        z
+    </div>
+    <div class="projectionNumberOfSeats">
+        {{ numberOfSeats }}
+    </div>
+</div>

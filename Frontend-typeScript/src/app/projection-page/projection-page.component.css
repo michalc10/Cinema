@@ -1,0 +1,57 @@
+.projectionContainer {
+    display: flex;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-bottom: 4px;
+    padding-right: 8px;
+    align-items: center;
+}
+
+.projectionContainer:hover {
+    background-color: yellow;
+    cursor: pointer;
+    color: black;
+}
+
+.projectionDate {
+    margin-right: 8px;
+}
+
+.projectionTime {
+    margin-right: 12px;
+}
+
+.projectionRoomName {
+    color: grey;
+}
+
+.horizontalSpacer {
+    flex: 1;
+    height: 1px;
+    background-color: #414141;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.projectionAvailableTicketsLabel {
+    color: grey;
+    margin-right: 8px;
+}
+
+.projectionAvailableTickets {
+    margin-right: 4px;
+}
+
+.projectionNumberOfSeatsLabel {
+    color: grey;
+    margin-right: 4px;
+}
+
+.projectionFilmTitle {
+    color: yellow;
+    margin-right: 12px;
+}
+
+.projectionContainer:hover .projectionFilmTitle {
+    color: black;
+}

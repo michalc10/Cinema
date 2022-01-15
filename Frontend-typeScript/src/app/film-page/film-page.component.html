@@ -1,0 +1,35 @@
+<div >
+    <div class="navbar">
+        <div class="backBtn" (click)="returnToMain()">◀</div>
+        <div class="navTitle">{{ filmToShow?.title }}</div>
+    </div>
+    <div class="content">
+        <div *ngIf="filmToShow === null" class="noFilmDisplay">Nie znaleziono takiego filmu...</div>
+        <div *ngIf="filmToShow !== null && filmToShow !== undefined" class="filmDetailsContainer">
+            <div class="filmDetails">
+                <div class="filmImage">
+                    <img *ngIf="filmToShow?.imageUrl" [src]="filmToShow?.imageUrl" style="width: 100%; height: 100%;"/>
+                </div>
+                <div class="filmInformation">
+                    <app-film-page-film-detail name="Tytuł:" [value]="filmToShow?.title ?? '??'" ></app-film-page-film-detail>
+                    <div class="verticalSpacer"></div>
+                    <app-film-page-film-detail name="Długość trwania:" [value]="filmToShow?.duration ?? '??' + ' minut' " ></app-film-page-film-detail>
+                </div>
+                <div class="buttonsMenu">
+                    <div class="actionButton deleteButton" (click)="deleteFilm()">Usuń film</div>
+                    <div class="actionButton editButton" (click)="openEditFilmMenu()">Edytuj</div>
+                </div>
+            </div>
+            <div class="projectionsLabel">Projekcje:</div>
+            <div class="projectionsList">
+            <app-projection *ngFor="let projection of projections" (openReservationMenu)="openReservationMenu(projection.projectionId)" [date]="projection.date ?? '00.00.0000'" [time]="projection.time ?? '00:00'" [roomName]="projection.roomName ?? '??'" [availableTickets]="projection.availableTickets ?? 0" [numberOfSeats]="projection.numberOfSeats ?? 0"></app-projection>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="currentlyOpenProjectionId >= 0 && filmToShow" class="dialog">
+        <app-reservation-menu [projectionId]="currentlyOpenProjectionId" (closeMenu)="closeReservationMenu()"></app-reservation-menu>
+    </div>
+    <div *ngIf="editFilmDialogOpen && filmId" class="dialog">
+        <app-edit-film-menu [filmId]="filmId" (closeMenu)="closeEditFilmMenu()"></app-edit-film-menu>
+    </div>
+</div>

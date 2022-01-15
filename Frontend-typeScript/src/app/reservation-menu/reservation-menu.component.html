@@ -1,0 +1,26 @@
+<div class="mainContainer">
+    <div class="navBar">
+        <div class="exitButton" (click)="close()">✖</div>
+        <div class="titleDisplay">Rezerwacja</div>
+    </div>
+    <div *ngIf="projection && room && film">
+        <div class="projectionInformationBox">
+            <div class="filmInformationContainer">
+                <div class="filmTitleBox">{{ film['title'] ?? 'Tytuł' }}</div>
+                <div class="filmDurationBox">{{ (film['duration'] ?? 0) + ' minut' }}</div>
+            </div>
+            <div class="projectionDateBox">{{ projection['date'] ?? '00.00.0000' }}</div>
+            <div class="projectionTimeBox">{{ projection['time'] ?? '00:00' }}</div>
+            <div class="roomNameBox">{{ 'Sala ' + (room['nr'] ?? '-1') }}</div>
+        </div>
+        <div class="marginContainer">
+            <app-reservation-selector [selectedSeatsNumbers]="selectedSeatsNumbers" (onSelectedSeat)="onSelected($event)" [numberOfSeats]="room.numberOfSeats ?? 0" [reservedSeatsNumbers]="projection.reservedSeatsNumbers ?? []"></app-reservation-selector>
+        </div>
+        <div class="reservationSummaryContainer">
+            <div class="reservationSummaryLabel">wybrano </div>
+            <div class="reservationSummary">{{ selectedSeatsNumbers.length }}
+                {{ getPlacePlural(selectedSeatsNumbers.length) }}</div>
+            <div [ngClass]="'submitButton' + (selectedSeatsNumbers.length > 0 ? '' : ' submitButtonDisabled')" (click)="makeReservation()">Rezerwuj</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+.seatsMainContainer {
+    background-color: #414141;
+    border-radius: 2px;
+    padding: 4px;
+}
+
+.screen {
+    /* height: 17px; */
+    margin: 4px;
+    border: 1px solid grey;
+    color: grey;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+.seatsRow {
+    display: flex;
+}
+
+.seat {
+    box-sizing: border-box;
+
+    width: 35px;
+    height: 35px;
+
+    margin: 4px;
+    border: 1px solid white;
+    border-radius: 2px;
+
+    color: white;
+    padding-left: 5px;
+}
+
+.seat:hover {
+    cursor: pointer;
+    color: black;
+    border-color: white;
+    background-color: white;
+}
+
+.seat-inactive {
+    border: 1px solid grey;
+    background-color: grey;
+    color: black;
+}
+
+
+.seat-inactive:hover {
+    cursor: default;
+    border: 1px solid grey;
+    background-color: grey;
+    color: black;
+}
+
+.seat-selected {
+    border-color: yellow;
+    background-color: yellow;
+    color: black;
+}
+
+.seat-selected:hover {
+    border-color: black;
+    background-color: #ffff88;
+    color: black;
+}

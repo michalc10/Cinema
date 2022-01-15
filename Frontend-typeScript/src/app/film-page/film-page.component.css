@@ -1,0 +1,175 @@
+.navbar {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+
+    background-color: #242424;
+}
+
+.content {
+    position: absolute;
+    top: 50px;
+    bottom: 0px;
+    width: 100%;
+    background-color: #1d1d1d;
+}
+
+.backBtn {
+    margin-left: 32px;
+    margin-right: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
+    font-size: 21px;
+}
+
+.backBtn:hover {
+    color: black;
+    background-color: yellow;
+    border-radius: 1.7px;
+    cursor: pointer;
+}
+
+.navTitle {
+    color: white;
+    font-size: 21px;
+}
+
+.noFilmDisplay {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 45px;
+    color: white;
+}
+
+.filmDetailsContainer {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    bottom: 0px;
+    right: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filmDetails {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.filmImage {
+    width: 200px;
+    height: 300px;
+    background-color: #414141;
+}
+
+.filmInformation {
+    flex: 1;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    
+    color: white;
+    font-size: 21px;
+}
+
+.projectionsLabel {
+    font-size: 21px;
+    color: white;
+    margin-top: 30px;
+}
+
+.projectionsList {
+    flex: 1;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    border: 1px solid #414141;
+    border-radius: 2px;
+    text-align: center;
+    color: white;
+    overflow: auto;
+}
+
+.projectionContainer:nth-child(2n) {
+    background-color: #272727;
+}
+
+.projectionContainer:nth-child(2n):hover {
+    background-color: yellow;
+}
+
+.verticalSpacer {
+    height: 8px;
+}
+
+.buttonsMenu {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.actionButton {
+    display: flex;
+    padding-top: 8px;
+    padding-left: 12px;
+    padding-bottom: 8px;
+    padding-right: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid white;
+    color: white;
+
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+
+    border-radius: 2px;
+
+    font-size: 21px;
+    font-weight: 100;
+}
+
+.actionButton:hover {
+    margin-left: auto;
+    margin-right: auto;
+
+    cursor: pointer;
+    
+    border: 1px solid white;
+    background-color: white;
+
+    border-radius: 2px;
+
+    color: black;
+}
+
+.deleteButton {
+    width: 85px;
+    justify-content: center;
+    border: 1px solid #ff4b2b;
+    color: #ff4b2b;
+}
+
+.deleteButton:hover {
+    border: 1px solid #ff4b2b;
+    background-color: #ff4b2b;
+}
+
+.editButton {
+    margin-top: 16px;
+    width: 85px;
+    justify-content: center;
+    border: 1px solid yellow;
+    color: yellow;
+}
+
+.editButton:hover {
+    border: 1px solid yellow;
+    background-color: yellow;
+}

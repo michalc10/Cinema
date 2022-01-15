@@ -1,0 +1,22 @@
+[
+    {
+        "nr": 1,
+        "numberOfSeats": 40
+    },
+    {
+        "nr": 2,
+        "numberOfSeats": 25
+    },
+    {
+        "nr": 3,
+        "numberOfSeats": 70
+    },
+    {
+        "nr": 4,
+        "numberOfSeats": 70
+    },
+    {
+        "nr": 5,
+        "numberOfSeats": 35
+    }
+]

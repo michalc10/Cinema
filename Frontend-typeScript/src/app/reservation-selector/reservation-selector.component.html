@@ -1,0 +1,6 @@
+<div class="seatsMainContainer">
+    <div class="screen">Ekran</div>
+    <div *ngFor="let row of rows; index as i" class="seatsRow">
+        <div *ngFor="let seat of row; index as j" [ngClass]="'seat' + (seat == -1 ? ' seat-inactive' : '') + (seat == 1 ? ' seat-selected' : '')" (click)="onSelected(i * 8 + j + 1)">{{ i * 8 + j + 1 }}</div>
+    </div>
+</div>

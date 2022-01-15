@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "date": "11.01.2022",
+        "time": "13:35",
+        "filmId": 7,
+        "roomNr": 1,
+        "soldTicketsCount": 4,
+        "availableTicketsCount": 36,
+        "reservedSeatsNumbers": [
+            3,
+            29,
+            9,
+            32
+        ]
+    },
+    {
+        "id": 2,
+        "date": "15.01.2022",
+        "time": "14:14",
+        "filmId": 2,
+        "roomNr": 2,
+        "soldTicketsCount": 0,
+        "availableTicketsCount": 25,
+        "reservedSeatsNumbers": []
+    }
+]

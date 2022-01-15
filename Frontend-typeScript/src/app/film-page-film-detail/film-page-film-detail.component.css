@@ -1,0 +1,13 @@
+.detailRow {
+    display: flex;
+}
+
+.detailName {
+    font-size: 21px;
+    color: white;
+}
+
+.detailValue {
+    font-size: 21px;
+    color: yellow;
+}

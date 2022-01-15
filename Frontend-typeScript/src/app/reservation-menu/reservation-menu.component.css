@@ -1,0 +1,169 @@
+.mainContainer {
+    background-color: #242424;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #313131;
+}
+
+.exitButton {
+    font-size: 30px;
+    color: yellow;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.exitButton:hover {
+    color: black;
+    background-color: yellow;
+    border-radius: 1.7px;
+    cursor: pointer;
+}
+
+.titleDisplay {
+    font-size: 21px;
+    color: white;
+    margin-right: 16px;
+}
+
+.projectionInformationBox {
+    margin-top: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+}
+
+.filmInformationContainer {
+    display: flex;
+    align-items: baseline;
+}
+
+.filmTitleBox {
+    font-size: 21px;
+    margin-right: 8px;
+}
+
+.filmDurationBox {
+    color: grey;
+    font-size: 15px;
+}
+
+.projectionDateBox {
+    color:grey;
+}
+
+.projectionTimeBox {
+    color:grey;
+}
+
+.roomNameBox {
+    color: grey;
+}
+
+.seatsDisplay {
+    height: 200px;
+    width: 300px;
+    background-color: yellow;
+    margin: 20px;
+}
+
+.marginContainer {
+    margin: 20px;
+    margin-bottom: 10px;
+}
+
+.reservationSummaryContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    align-items: center;
+    align-content: center;
+    justify-content: end;
+}
+
+.reservationSummaryLabel {
+    margin-right: 8px;
+    color: grey;
+}
+
+.reservationSummary {
+    color: white;
+}
+
+.submitButtonContainer {
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+.submitButton {
+    display: flex;
+    margin-left: 20px;
+
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+
+    border: 1px solid yellow;
+    border-radius: 2px;
+
+    /* font-size: 30px; */
+    padding-top: 8px;
+    padding-left: 12px;
+    padding-bottom: 8px;
+    padding-right: 12px;
+    font-weight: 100;
+    color: yellow;
+}
+
+.submitButton:hover {
+
+    border: 1px solid yellow;
+    cursor: pointer;
+
+    background-color: yellow;
+    border-radius: 2px;
+
+    color: black;
+}
+
+.submitButtonDisabled {
+    display: flex;
+    margin-left: 20px;
+
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+
+    border: 1px solid grey;
+    border-radius: 2px;
+
+    /* font-size: 30px; */
+    padding-top: 8px;
+    padding-left: 12px;
+    padding-bottom: 8px;
+    padding-right: 12px;
+    font-weight: 100;
+    color: grey;
+}
+
+.submitButtonDisabled:hover {
+
+    border: 1px solid grey;
+    cursor: default;
+
+    background-color: #242424;
+    border-radius: 2px;
+
+    color: grey;
+}

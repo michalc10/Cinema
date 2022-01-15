@@ -1,0 +1,16 @@
+<div class="mainContainer">
+    <div class="navBar">
+        <div class="exitButton" (click)="close()">✖</div>
+        <div class="titleDisplay">Edytuj film</div>
+    </div>
+    <div class="filmDetailsFieldsContainer">
+        <div class="fieldText">Nazwa filmu:</div>
+        <input [ngClass]="'filmDetailField' + (filmTitleError == true ? ' fieldError' : '')" type="text" [value]="filmTitle ?? ''" (input)="onFilmTitleChange($any($event).target.value)"/>
+        <div class="fieldText space">Czas trwania (w minutach):</div>
+        <input [ngClass]="'filmDetailField' + (filmDurationError == true ? ' fieldError' : '')" type="text" [value]="filmDuration ?? ''" (input)="onFilmDurationChange($any($event).target.value)" />
+        <div class="fieldText space">Link do plakatu filmu (image URL):</div>
+        <input class="filmDetailField" type="url" [value]="filmImageUrl ?? ''" (input)="onFilmImageUrlChange($any($event).target.value)" />
+        <div class="horizontalDivider"></div>
+        <div class="saveButton" (click)="submit()">Zapisz</div>
+    </div>
+</div>

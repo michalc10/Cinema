@@ -1,0 +1,26 @@
+<div class="main">
+    <div class="projectionsContent">
+        <div class="dateSwitcher">
+            <div [ngClass]="'previousDateButton' + (dateOffset == true ? ' inactiveButton' : '')" (click)="decreaseDate()">◀</div>
+            
+            <div class="dateDisplay">
+                {{dateOfProjections.getDate() }}
+                {{" "}}
+                {{dateOfProjections.getMonth() + 1 }}
+                {{" "}}
+                {{dateOfProjections.getFullYear() }}
+            </div>
+            <div class="nextDateButton" (click)="increaseDate()">▶</div>
+        </div>
+        <div class="projectionsContainer">
+            <app-projection *ngFor="let projection of projections" [filmTitle]="projection.filmTitle" (openReservationMenu)="openReservationMenu(projection.projectionId)" [date]="projection.date ?? '00.00.0000'" [time]="projection.time ?? '00:00'" [roomName]="projection.roomName ?? '??'" [availableTickets]="projection.availableTickets ?? 0" [numberOfSeats]="projection.numberOfSeats ?? 0"></app-projection>
+            
+        </div>
+    </div>
+    <div class="spacer">
+        <div class="divider"></div>
+    </div>
+    <div class="optionsMenu">
+        <div class="addProjectionButton" (click)="addProjectionPressed()">dodaj projekcję</div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="main">
+    <div class="filmsContainer">
+        <app-film-display *ngFor="let film of films" [film]="film"></app-film-display>
+        <div *ngIf="films !== null && films.length <= 0" class="noFilmsDisplay">Nie ma filmów</div>
+    </div>
+    <div class="spacer">
+        <div class="divider"></div>
+    </div>
+    <div class="optionsMenu">
+        <div class="addFilmButton" (click)="addFilmPressed()">dodaj film</div>
+    </div>
+</div>

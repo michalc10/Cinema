@@ -1,0 +1,176 @@
+.main {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    bottom: 0px;
+    right: 50px;
+    display: flex;
+
+    /* background-color: yellow; */
+}
+
+.projectionsContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.dateSwitcher {
+    /* background-color: red; */
+    display: flex;
+}
+
+.previousDateButton {
+    width: 30px;
+    height: 30px;
+    color: yellow;
+    border: 1px solid yellow;
+    border-right: none;
+    border-radius: 2px 0px 0px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.previousDateButton:hover {
+    color: black;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.dateDisplay {
+    /* box-sizing: border-box; */
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 30px;
+    color: white;
+    /* background-color: #414141; */
+    border: 1px solid yellow;
+    border: 1px solid yellow;
+    display: flex;
+    align-items: center;
+}
+
+.nextDateButton {
+    user-select: none;
+    width: 30px;
+    height: 30px;
+    color: yellow;
+    border: 1px solid yellow;
+    border-left: none;
+    border-radius: 0px 2px 2px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nextDateButton:hover {
+    color: black;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.inactiveButton {
+    width: 30px;
+    height: 30px;
+    color: grey;
+    border-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inactiveButton:hover {
+    color: grey;
+    background-color: transparent;
+    cursor: default;
+}
+
+.projectionsContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #414141;
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    color: white;
+
+    overflow-y: auto;
+    scrollbar-color: yellow #2c2c2c;
+}
+
+.projectionsContainer::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+  
+.projectionsContainer::-webkit-scrollbar-thumb {
+    background-color: yellow;
+}
+
+.spacer {
+    width: 40px;
+    padding-bottom: 40px;
+}
+
+.divider {
+    flex: 1;
+    width: 1px;
+    height: 100%;
+    background-color: #3a3a3a;
+    margin: auto;
+}
+
+.optionsMenu {
+    width: 150px;
+    /* background-color: blue; */
+}
+
+.addProjectionButton {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+
+    border: 1px solid yellow;
+    border-radius: 2px;
+
+    font-size: 24px;
+    font-weight: 100;
+    color: yellow;
+}
+
+.addProjectionButton:hover {
+
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid yellow;
+    cursor: pointer;
+
+    background-color: yellow;
+    border-radius: 2px;
+
+    color: black;
+}
+
+.noProjectionsDisplay {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 45px;
+    color: white;
+}

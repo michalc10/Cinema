@@ -1,0 +1,71 @@
+.filmDisplay {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+    align-content: flex-end;
+    justify-content: flex-end;
+
+    background-color: #414141;
+
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+
+    position: relative;
+
+    padding: 10px;
+
+    transition-duration: 100ms;
+    transition-property: scale;
+
+}
+
+.filmDisplay:hover {
+    outline: 5px solid white;
+    cursor: pointer;
+    scale: 105%;
+}
+
+.imageContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    padding: 0px;
+}
+
+.imageGradient {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    padding: 0px;
+
+    background-image: linear-gradient(transparent, transparent, black);
+}
+
+.filmInformationContainer {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.textContainer {
+    /* display: -webkit-box; */
+    /* -webkit-line-clamp: 2; number of lines to show */
+    /* line-clamp: 2;  */
+    /* -webkit-box-orient: vertical; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-lines: 2;
+    font-size: 21px;
+    color: white;
+}
+
+.durationContainer {
+    color: yellow;
+}

@@ -1,0 +1,57 @@
+.columnForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.textInput {
+    box-sizing: border-box;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+
+    font-size: 21px;
+
+    width: 400px;
+    height: 50px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border: 1px solid white;
+    border-radius: 2px;
+
+    background-color: transparent;
+
+    color: white;
+}
+
+.submitButton {
+    box-sizing: border-box;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+
+    font-size: 21px;
+
+    width: 400px;
+    height: 50px;
+
+    border: 1px solid yellow;
+    border-radius: 2px;
+
+    background-color: transparent;
+    color: yellow;
+}
+
+.submitButton:hover {
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+}
+
+.fieldError {
+    border: 1px solid red;
+    background-color: #ff000055;
+}

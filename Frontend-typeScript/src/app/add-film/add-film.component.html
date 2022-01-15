@@ -1,0 +1,8 @@
+<div>
+    <div class="columnForm">
+        <input [ngClass]="'textInput' + (filmTitleValid == false ? ' fieldError' : '')" type="text" id="name" placeholder="Wpisz nazwę filmu... " (input)="changeName($event)"  />
+        <input [ngClass]="'textInput' + (filmDurationValid == false ? ' fieldError' : '')" type="text" id="duration" placeholder="Wpisz długość trwania filmu... " (input)="changeDuration($event)" />
+        <input class="textInput" type="text" id="imageUrl" placeholder="Wpisz link obrazka filmu... " (input)="changeImageUrl($event)"  />
+        <button class="submitButton" (click)="addMovie()">Dodaj film</button>
+    </div>
+</div>
